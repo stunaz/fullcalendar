@@ -21,6 +21,8 @@ export interface ToolbarInput {
   left?: string
   center?: string
   right?: string
+  start?: string
+  end?: string
 }
 
 export interface CustomButtonInput {
@@ -93,7 +95,7 @@ export interface OptionsInputBase {
   dayMaxEvents?: boolean | number
   dayMaxEventRows?: boolean | number
   moreLinkClick?: 'popover' | 'week' | 'day' | 'timeGridWeek' | 'timeGridDay' | string |
-    ((arg: { date: Date, allDay: boolean, allSegs: any[], hiddenSegs: any[], jsEvent: MouseEvent, view: ViewApi }) => void),
+  ((arg: { date: Date, allDay: boolean, allSegs: any[], hiddenSegs: any[], jsEvent: MouseEvent, view: ViewApi }) => void),
   timeZone?: string | boolean
   now?: DateInput | (() => DateInput)
   initialView?: string
